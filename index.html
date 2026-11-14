@@ -182,6 +182,30 @@
   .btn.brand{background:var(--metal);color:#fff;box-shadow:0 8px 18px rgba(217,65,26,.28)}
   .btn.ghost{background:#fff;color:var(--rust);border:1.5px solid var(--orange)}
 
+  /* ===== Bảng giá sửa máy ===== */
+  .pt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 26px rgba(120,60,20,.08)}
+  .pt-head{background:var(--night);padding:12px 12px 10px}
+  .pt-tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .pt-tabs::-webkit-scrollbar,.pt-models::-webkit-scrollbar{display:none}
+  .pt-tabs button{flex:none;border:0;cursor:pointer;font-size:13px;font-weight:800;color:rgba(255,255,255,.75);background:rgba(255,255,255,.08);padding:7px 13px;border-radius:999px}
+  .pt-tabs button[aria-selected="true"]{background:var(--metal);color:#fff;box-shadow:0 4px 12px rgba(245,122,0,.35)}
+  .pt-models{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:10px 12px;border-bottom:1px solid var(--line);background:#FFF9F3}
+  .pt-models button{flex:none;cursor:pointer;font-size:12.5px;font-weight:700;color:var(--ink);background:#fff;border:1.5px solid var(--line);padding:6px 11px;border-radius:10px;white-space:nowrap}
+  .pt-models button[aria-pressed="true"]{border-color:var(--orange);color:var(--rust);background:#FFF1E2}
+  .pt-title{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:12px 14px 4px}
+  .pt-title b{font-size:16px;font-weight:900;color:var(--night)}
+  .pt-title span{font-size:11px;color:var(--muted)}
+  .pt-list{list-style:none;padding:2px 14px 8px}
+  .pt-list li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .pt-list li:last-child{border-bottom:0}
+  .pt-list i{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-style:normal;font-size:15px;background:#FFF1E2}
+  .pt-list .n{flex:1;min-width:0;font-weight:600}
+  .pt-list .n small{display:block;font-size:11px;font-weight:500;color:var(--muted);line-height:1.2}
+  .pt-list .v{flex:none;font-weight:900;color:var(--deep);font-variant-numeric:tabular-nums}
+  .pt-list .v.na{font-weight:700;font-size:12px;color:var(--muted);background:#F6EEE6;padding:3px 8px;border-radius:999px}
+  .pt-foot{padding:0 14px 14px}
+  .pt-foot .note{margin-top:0}
+
   /* ===== WiFi ===== */
   .wifi{position:relative;overflow:hidden;border-radius:var(--radius);background:linear-gradient(160deg,var(--night-2),var(--night));color:#fff;padding:18px}
   .wifi .hex{opacity:.08}
@@ -313,9 +337,9 @@
     </div>
     <div class="row-btns">
       <a class="btn dark" href="tel:+821081859168">📞 Gọi đặt lịch</a>
-      <a class="btn light" href="https://www.facebook.com/share/1FQ3YDHGtS/?mibextid=wwXIfr" target="_blank" rel="noopener">Hỏi giá sửa</a>
+      <a class="btn light" href="#bang-gia">Xem bảng giá</a>
     </div>
-    <small class="only">Shop chỉ nhận sửa iPhone</small>
+    <small class="only">Nhận sửa iPhone &amp; iPad</small>
   </section>
 
   <div class="carriers">Sim chính chủ <b class="sk">SK</b><b class="kt">KT</b><b class="lg">U+</b></div>
@@ -349,6 +373,24 @@
       <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 2h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><rect x="8.5" y="11" width="7" height="7" rx="1"/></svg></div><b>Sim 4G · 5G</b><small>Toàn quốc</small></div>
       <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg></div><b>Lắp WiFi</b><small>Miễn phí</small></div>
       <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6.3 5.4 5.4 0 0 1 21.3 12C19 16.6 12 21 12 21z"/></svg></div><b>Hỗ trợ</b><small>Nhiệt tình</small></div>
+    </div>
+  </section>
+
+  <section class="reveal" id="bang-gia">
+    <h2 class="h2">Bảng giá sửa máy</h2>
+    <p class="sub">Chọn dòng máy để xem giá · đơn vị won (₩)</p>
+    <div class="pt">
+      <div class="pt-head"><div class="pt-tabs" role="tablist" aria-label="Dòng máy"></div></div>
+      <div class="pt-models" aria-label="Model"></div>
+      <div class="pt-title"><b id="ptName">iPhone</b><span>Giá tham khảo</span></div>
+      <ul class="pt-list" id="ptList"></ul>
+      <div class="pt-foot">
+        <p class="note">* Giá có thể thay đổi theo tình trạng máy và linh kiện. Mục “Liên hệ” vui lòng nhắn shop để báo giá.</p>
+        <div class="row-btns">
+          <a class="btn brand" href="https://www.facebook.com/share/1FQ3YDHGtS/?mibextid=wwXIfr" target="_blank" rel="noopener">Hỏi giá sửa</a>
+          <a class="btn ghost" href="tel:+821081859168">📞 Gọi đặt lịch</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -483,6 +525,42 @@
 
 <script>
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Bảng giá sửa máy
+  (function(){
+    var D={"series":[["X","iPhone X",["X","XS","XR","XS Max"]],["11","iPhone 11",["11","11 Pro","11 Pro Max"]],["12","iPhone 12",["12 mini","12","12 Pro","12 Pro Max"]],["13","iPhone 13",["13 mini","13","13 Pro","13 Pro Max"]],["14","iPhone 14",["14","14 Plus","14 Pro","14 Pro Max"]],["15","iPhone 15",["15","15 Plus","15 Pro","15 Pro Max"]],["16","iPhone 16",["16","16 Plus","16 Pro","16 Pro Max"]],["iPad","iPad",["Air 4","Air 5","Air 6","mini 6","Gen 10","Pro 11\" 2018","Pro 11\" 2020","Pro 11\" M1/M2","Pro 11\" M4","Pro 13\" M4"]]],"iphone":{"X":{"pin":30,"kinh":60,"cu":75,"lcd":130,"lcdc":110,"sac":60,"face":50,"cam":45,"lung":80,"main":"70-100"},"XS":{"pin":35,"kinh":55,"cu":75,"lcd":130,"lcdc":110,"sac":60,"face":55,"cam":45,"lung":80,"main":"70-100"},"XR":{"pin":35,"kinh":55,"cu":75,"lcd":120,"lcdc":110,"sac":65,"face":55,"cam":45,"lung":80,"main":"70-100"},"XS Max":{"pin":40,"kinh":75,"cu":90,"lcd":170,"lcdc":110,"sac":65,"face":55,"cam":45,"lung":80,"main":"80-150"},"11":{"pin":40,"kinh":65,"cu":85,"lcd":130,"lcdc":100,"sac":65,"face":65,"cam":45,"lung":80,"main":"80-150"},"11 Pro":{"pin":45,"kinh":70,"cu":95,"lcd":150,"lcdc":115,"sac":90,"face":65,"cam":45,"lung":80,"main":"80-150"},"11 Pro Max":{"pin":50,"kinh":75,"cu":100,"lcd":150,"lcdc":120,"sac":90,"face":65,"cam":45,"lung":85,"main":"80-180"},"12 mini":{"pin":40,"kinh":75,"cu":110,"lcd":130,"lcdc":140,"sac":80,"face":70,"cam":50,"lung":85,"main":"110-180"},"12":{"pin":50,"kinh":80,"cu":90,"lcd":150,"lcdc":130,"sac":75,"face":70,"cam":50,"lung":85,"main":"110-180"},"12 Pro":{"pin":50,"kinh":80,"cu":90,"lcd":150,"lcdc":130,"sac":80,"face":70,"cam":50,"lung":90,"main":"110-180"},"12 Pro Max":{"pin":50,"kinh":90,"cu":110,"lcd":250,"lcdc":150,"sac":85,"face":70,"cam":50,"lung":100,"main":"110-230"},"13 mini":{"pin":40,"kinh":80,"cu":null,"lcd":220,"lcdc":150,"sac":75,"face":80,"cam":50,"lung":95,"main":"100-230"},"13":{"pin":50,"kinh":80,"cu":null,"lcd":170,"lcdc":140,"sac":75,"face":80,"cam":50,"lung":100,"main":"100-230"},"13 Pro":{"pin":60,"kinh":90,"cu":null,"lcd":280,"lcdc":170,"sac":80,"face":80,"cam":50,"lung":100,"main":"130-230"},"13 Pro Max":{"pin":60,"kinh":90,"cu":null,"lcd":290,"lcdc":190,"sac":80,"face":80,"cam":50,"lung":110,"main":"130-230"},"14":{"pin":60,"kinh":90,"cu":null,"lcd":180,"lcdc":150,"sac":90,"face":90,"cam":60,"lung":100,"main":"130-230"},"14 Plus":{"pin":60,"kinh":90,"cu":null,"lcd":210,"lcdc":160,"sac":90,"face":90,"cam":60,"lung":100,"main":"130-230"},"14 Pro":{"pin":60,"kinh":100,"cu":null,"lcd":310,"lcdc":240,"sac":95,"face":90,"cam":60,"lung":110,"main":"180-280"},"14 Pro Max":{"pin":70,"kinh":100,"cu":null,"lcd":450,"lcdc":270,"sac":100,"face":90,"cam":60,"lung":110,"main":"180-280"},"15":{"pin":50,"kinh":90,"cu":null,"lcd":255,"lcdc":null,"sac":95,"face":100,"cam":60,"lung":105,"main":"130-230"},"15 Plus":{"pin":50,"kinh":90,"cu":null,"lcd":250,"lcdc":null,"sac":110,"face":100,"cam":60,"lung":105,"main":"130-230"},"15 Pro":{"pin":70,"kinh":100,"cu":null,"lcd":400,"lcdc":270,"sac":100,"face":110,"cam":60,"lung":110,"main":"180-330"},"15 Pro Max":{"pin":70,"kinh":100,"cu":null,"lcd":450,"lcdc":290,"sac":110,"face":110,"cam":60,"lung":110,"main":"180-330"},"16":{"pin":null,"kinh":100,"cu":null,"lcd":380,"lcdc":null,"sac":null,"face":110,"cam":60,"lung":120,"main":"130-230"},"16 Plus":{"pin":null,"kinh":100,"cu":null,"lcd":440,"lcdc":null,"sac":null,"face":110,"cam":60,"lung":120,"main":"130-230"},"16 Pro":{"pin":null,"kinh":120,"cu":null,"lcd":430,"lcdc":null,"sac":null,"face":110,"cam":60,"lung":130,"main":"180-330"},"16 Pro Max":{"pin":null,"kinh":120,"cu":null,"lcd":550,"lcdc":null,"sac":null,"face":110,"cam":60,"lung":130,"main":"180-330"}},"ipad":{"Air 4":{"lcd":260,"kinh":130,"cu":160,"pin":110,"main":"150-200"},"Air 5":{"lcd":260,"kinh":130,"cu":160,"pin":110,"main":"130-180"},"Air 6":{"lcd":300,"kinh":130,"cu":180,"pin":120,"main":"130-180"},"mini 6":{"lcd":330,"kinh":130,"cu":170,"pin":120,"main":"130-180"},"Gen 10":{"lcd":260,"kinh":70,"cu":null,"pin":120,"main":"130-180"},"Pro 11\" 2018":{"lcd":280,"kinh":130,"cu":170,"pin":120,"main":"130-180"},"Pro 11\" 2020":{"lcd":280,"kinh":130,"cu":170,"pin":120,"main":"130-280"},"Pro 11\" M1/M2":{"lcd":280,"kinh":110,"cu":150,"pin":100,"main":"130-280"},"Pro 11\" M4":{"lcd":650,"kinh":150,"cu":200,"pin":100,"main":"180-330"},"Pro 13\" M4":{"lcd":630,"kinh":null,"cu":null,"pin":null,"main":"180-330"}}};
+    var LB={pin:['🔋','Thay pin'],kinh:['🪟','Ép kính','Giữ nguyên màn zin'],cu:['👆','Ép cảm ứng'],
+      lcd:['📱','Màn hình LCD chính hãng'],lcdc:['📲','Màn hình LCD China'],sac:['🔌','Chân sạc'],
+      face:['🙂','Face ID'],cam:['📷','Đốm camera'],lung:['✨','Kính lưng'],main:['🧩','Main board','Tuỳ lỗi']};
+    var IPAD_LB={lcd:['📱','Màn hình LCD (zin)']};
+    var tabs=document.querySelector('.pt-tabs'),models=document.querySelector('.pt-models'),
+        list=document.getElementById('ptList'),name=document.getElementById('ptName');
+    function fmt(v){
+      if(v===null) return '<span class="v na">Liên hệ</span>';
+      if(typeof v==='string'){var a=v.split('-');return '<span class="v">'+a[0]+'.000–'+a[1]+'.000₩</span>';}
+      return '<span class="v">'+(v*1000).toLocaleString('de-DE')+'₩</span>';
+    }
+    function show(isPad,m){
+      var row=(isPad?D.ipad:D.iphone)[m];
+      name.textContent=(isPad?'iPad ':'iPhone ')+m;
+      list.innerHTML=Object.keys(row).map(function(k){
+        var l=(isPad&&IPAD_LB[k])||LB[k];
+        return '<li><i>'+l[0]+'</i><span class="n">'+l[1]+(l[2]?'<small>'+l[2]+'</small>':'')+'</span>'+fmt(row[k])+'</li>';
+      }).join('');
+      models.querySelectorAll('button').forEach(function(b){var on=b.dataset.m===m;b.setAttribute('aria-pressed',on);if(on)models.scrollLeft=b.offsetLeft-models.offsetLeft-12;});
+    }
+    function pick(i){
+      var sr=D.series[i],isPad=sr[0]==='iPad';
+      tabs.querySelectorAll('button').forEach(function(b,j){b.setAttribute('aria-selected',j===i)});
+      models.innerHTML=sr[2].map(function(m){return '<button type="button" data-m="'+m.replace(/"/g,'&quot;')+'">'+(isPad?m:'iPhone '+m)+'</button>'}).join('');
+      models.querySelectorAll('button').forEach(function(b){b.onclick=function(){show(isPad,b.dataset.m)}});
+      show(isPad,sr[2][sr[2].length-1]);
+    }
+    tabs.innerHTML=D.series.map(function(sr,i){return '<button type="button" role="tab" data-i="'+i+'">'+sr[1]+'</button>'}).join('');
+    tabs.querySelectorAll('button').forEach(function(b){b.onclick=function(){pick(+b.dataset.i)}});
+    pick(5);
+    tabs.scrollLeft=tabs.children[5].offsetLeft-tabs.offsetLeft-80;
+  })();
 
   // Phóng to ảnh
   var modal=document.getElementById('modal'), mImg=modal.querySelector('img'), mCap=modal.querySelector('.cap');
