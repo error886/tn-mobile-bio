@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tâm Nguyễn Mobile</title>
+<meta name="description" content="TN Tâm Nguyễn Mobile – Uy tín cho người Việt tại Hàn. Điện thoại, iPad, MacBook chính hãng, sửa chữa iPhone, sim 4G/5G, lắp WiFi toàn Hàn. 경북 영주시 구성로 387.">
+<meta name="theme-color" content="#1C120C">
+<meta property="og:title" content="Tâm Nguyễn Mobile – Uy tín • Bảo mật • Trách nhiệm">
+<meta property="og:description" content="Điện thoại – iPad – MacBook • Sửa chữa iPhone • Sim 4G/5G • Lắp WiFi toàn Hàn. 경북 영주시 구성로 387 · 010 8185 9168">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ===== Màu nhận diện TN Mobile (lấy từ logo cam ánh kim) ===== */
+  :root{
+    --night:#1C120C;     /* nền tối ấm, làm nổi màu cam kim loại */
+    --night-2:#2B1B11;
+    --gold:#FFB800;      /* vàng sáng của logo */
+    --orange:#F57A00;    /* cam chủ đạo */
+    --deep:#D9411A;      /* cam đỏ phần đổ bóng */
+    --rust:#A82A10;
+    --metal:linear-gradient(135deg,var(--gold) 0%,var(--orange) 48%,var(--deep) 100%);
+    --bg:#FFF7EF;
+    --card:#FFFFFF;
+    --ink:#24160D;
+    --muted:#7A6455;
+    --line:#F1E2D3;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;min-height:100vh;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:480px;margin:0 auto;padding:0 16px 40px;position:relative}
+  .ko{font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;overflow:hidden;text-align:center;color:#fff;
+    background:radial-gradient(120% 80% at 50% 30%,#3A2414 0%,var(--night) 70%);
+    padding:26px 16px 96px;
+  }
+  /* hoạ tiết tổ ong giống nền logo */
+  .hex{position:absolute;inset:0;opacity:.13;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='72' viewBox='0 0 42 72'%3E%3Cpath d='M21 0l21 12v24L21 48 0 36V12zM21 48l21 12v24M21 48L0 60v24' fill='none' stroke='%23FFB800' stroke-width='1.2'/%3E%3C/svg%3E");
+    background-size:42px 72px;
+    -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 80%);mask-image:linear-gradient(180deg,#000 0%,transparent 80%)}
+  .stripe{position:absolute;width:70%;height:18px;transform:rotate(-35deg)}
+  .stripe.s1{top:18px;left:-34%;background:var(--metal)}
+  .stripe.s2{top:46px;left:-36%;height:8px;background:var(--gold);opacity:.8}
+  .hero::after{content:"";position:absolute;left:-20%;right:-20%;bottom:-8px;height:64px;background:var(--bg);transform:rotate(-6deg);box-shadow:0 -12px 0 0 var(--orange),0 -20px 0 0 var(--gold)}
+  .hero-top{position:relative;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,184,0,.3)}
+  .pill i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+  .logo{position:relative;width:230px;height:auto;margin:0 auto;filter:drop-shadow(0 10px 24px rgba(245,122,0,.35))}
+  h1{position:relative;font-size:28px;font-weight:900;letter-spacing:.5px;line-height:1.15;margin-top:6px}
+  h1 span{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .slogan{position:relative;margin-top:8px;font-style:italic;font-weight:600;font-size:15px;color:#FFD9A8}
+  .values{position:relative;display:inline-flex;flex-wrap:wrap;justify-content:center;gap:6px 10px;margin-top:12px;
+    background:var(--metal);color:#fff;font-weight:800;font-size:10.5px;letter-spacing:.3px;text-transform:uppercase;white-space:nowrap;
+    padding:7px 13px;border-radius:999px;box-shadow:0 8px 20px rgba(217,65,26,.35);flex-wrap:nowrap;gap:7px}
+  .values i{width:5px;height:5px;border-radius:50%;background:#fff;align-self:center;display:block}
+
+  /* ===== CTA ===== */
+  .cta-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:-60px;position:relative;z-index:2}
+  .cta{position:relative;display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;
+    background:var(--card);border:1px solid var(--line);box-shadow:0 6px 18px rgba(60,30,10,.07);
+    transition:transform .15s ease, box-shadow .15s ease;min-width:0;cursor:pointer;font-family:inherit;text-align:left;width:100%;color:inherit}
+  .cta:active{transform:scale(.98)}
+  @media (hover:hover){.cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(60,30,10,.14)}}
+  .cta .ic{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center}
+  .cta .ic svg{width:24px;height:24px}
+  .cta .txt{flex:1;min-width:0}
+  .cta b{display:block;font-size:16px;font-weight:800;line-height:1.25}
+  .cta small{display:block;font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .cta .arr{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--bg);color:var(--rust)}
+  .cta .arr svg{width:16px;height:16px}
+  .cta.primary{border:none;color:#fff;padding:18px 16px;background:var(--metal);box-shadow:0 14px 30px rgba(217,65,26,.35)}
+  .cta.primary small{color:rgba(255,255,255,.88)}
+  .cta.primary .arr{background:rgba(255,255,255,.22);color:#fff}
+  .cta.primary .ic{background:#fff;color:#1877F2}
+  .cta.dark{border:none;color:#fff;background:linear-gradient(135deg,var(--night-2),var(--night));box-shadow:0 12px 26px rgba(28,18,12,.3)}
+  .cta.dark small{color:#E9C9A6}
+  .cta.dark .arr{background:rgba(255,184,0,.18);color:var(--gold)}
+  .cta.dark .ic{background:var(--metal);color:#fff}
+  .badge{position:absolute;top:-9px;right:14px;font-size:10.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
+    background:var(--night);color:var(--gold);padding:3px 9px;border-radius:999px;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+  .ic.call{background:#FFF0E0;color:var(--deep)}
+  .ic.zalo{background:#E6F0FF;color:#0068FF;font-weight:900;font-size:13px}
+  .ic.map{background:#E9FBF0;color:#03A94F}
+
+  /* ===== Sections ===== */
+  section{margin-top:28px}
+  .h2{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:800;color:var(--night);margin-bottom:12px}
+  .h2::before{content:"";width:5px;height:20px;border-radius:3px;background:var(--metal)}
+
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 6px;text-align:center}
+  .svc .si{width:42px;height:42px;margin:0 auto 7px;border-radius:13px;background:var(--metal);display:grid;place-items:center;color:#fff;box-shadow:0 6px 14px rgba(245,122,0,.3)}
+  .svc svg{width:22px;height:22px}
+  .svc b{display:block;font-size:12.5px;font-weight:800;color:var(--night);line-height:1.25}
+  .svc small{display:block;font-size:10.5px;font-weight:700;color:var(--deep);text-transform:uppercase;margin-top:2px}
+
+  .promo{position:relative;overflow:hidden;border-radius:var(--radius);background:linear-gradient(160deg,var(--night-2),var(--night));color:#fff;padding:18px}
+  .promo::after{content:"";position:absolute;right:-30px;bottom:-30px;width:130px;height:130px;border-radius:50%;border:16px solid rgba(255,184,0,.25)}
+  .promo h3{position:relative;font-size:18px;font-weight:900;line-height:1.25}
+  .promo h3 span{color:var(--gold)}
+  .promo ul{position:relative;margin-top:10px;display:grid;gap:8px}
+  .promo li{list-style:none;display:flex;gap:10px;font-size:14px;font-weight:500;color:#F5E6D6}
+  .promo li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--metal) center/12px no-repeat}
+  .promo em{font-style:normal;color:var(--gold);font-weight:800}
+  .promo .poster{position:relative;margin-top:14px;border:0;padding:0;background:none;width:100%;border-radius:14px;overflow:hidden;cursor:zoom-in}
+  .promo .poster img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top}
+  .promo .poster span{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px}
+
+  .info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:grid;gap:14px;position:relative;overflow:hidden}
+  .info::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--metal)}
+  .row{display:flex;gap:12px;align-items:flex-start;min-width:0}
+  .row > div{min-width:0;overflow-wrap:anywhere}
+  .row .ri{flex:none;width:36px;height:36px;border-radius:12px;background:#FFF0E0;display:grid;place-items:center;color:var(--deep)}
+  .row .ri svg{width:18px;height:18px}
+  .row small{display:block;font-size:12px;color:var(--muted)}
+  .row b{display:block;font-size:15px;font-weight:700}
+  .row a.tel{display:block;font-size:15px;font-weight:700;color:var(--deep)}
+  .copy{margin-top:6px;font-size:12px;font-weight:700;color:#fff;background:var(--night);border:0;border-radius:999px;padding:5px 12px;cursor:pointer;font-family:inherit}
+
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .gallery button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:14px;overflow:hidden;display:block}
+  .gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;transition:transform .3s}
+  .gallery .wide{grid-column:span 2}
+  .gallery .wide img{aspect-ratio:16/10}
+  @media (hover:hover){.gallery button:hover img{transform:scale(1.04)}}
+
+  footer{text-align:center;margin-top:30px;color:var(--muted);font-size:12px}
+  footer img{width:90px;margin:0 auto 8px}
+
+  /* ===== Modal ảnh ===== */
+  .modal{position:fixed;inset:0;background:rgba(20,10,4,.88);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+  .modal.open{display:flex}
+  .modal img{max-height:84vh;width:auto;max-width:100%;border-radius:16px}
+  .modal .x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--night);font-size:22px;font-weight:700;cursor:pointer}
+  .modal .cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#fff;font-size:13px;padding:0 16px}
+
+  /* ===== Bảng Zalo / Gọi ===== */
+  .sheet{position:fixed;inset:0;background:rgba(20,10,4,.7);display:none;align-items:flex-end;justify-content:center;z-index:55}
+  .sheet.open{display:flex}
+  .sbox{position:relative;width:100%;max-width:480px;background:#fff;border-radius:22px 22px 0 0;padding:20px 18px calc(18px + env(safe-area-inset-bottom));text-align:center;display:grid;gap:10px}
+  .sx{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:var(--bg);color:var(--night);font-size:20px;font-weight:700;cursor:pointer}
+  .st{font-size:18px;font-weight:800;color:var(--night)}
+  .sn{font-size:14px;color:var(--muted);margin-top:-6px}
+  .sbtn{display:block;width:100%;padding:13px;border-radius:14px;font-family:inherit;font-weight:800;font-size:15px;cursor:pointer;border:0}
+  .sbtn.zalo{background:#0068FF;color:#fff}
+  .sbtn.brand{background:var(--metal);color:#fff}
+  .sbtn.line{background:#fff;color:var(--rust);border:1.5px solid var(--orange)}
+  .sbox small{font-size:12px;color:var(--muted)}
+
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--night);color:#fff;font-size:13px;font-weight:600;padding:10px 16px;border-radius:999px;transition:.25s;z-index:60;pointer-events:none;white-space:nowrap}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hex"></div>
+  <div class="stripe s1"></div><div class="stripe s2"></div>
+  <div class="hero-top">
+    <span class="pill"><i></i>Uy tín cho người Việt tại Hàn</span>
+    <span class="pill">📍 Yeongju · <span class="ko">영주</span></span>
+  </div>
+  <img class="logo" src="assets/logo.webp" alt="Logo TN Mobile" width="600" height="401">
+  <h1>TÂM NGUYỄN <span>MOBILE</span></h1>
+  <p class="slogan">Uy tín – Bảo mật – Trách nhiệm</p>
+  <div class="values">Chất lượng<i></i>Uy tín<i></i>Nhiệt tình<i></i>Bảo mật</div>
+</header>
+
+<main class="wrap">
+  <nav class="cta-list">
+    <a class="cta primary" href="https://www.facebook.com/share/1FQ3YDHGtS/?mibextid=wwXIfr" target="_blank" rel="noopener">
+      <span class="badge">Nhận tư vấn ngay</span>
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></span>
+      <span class="txt"><b>Facebook Tâm Nguyễn</b><small>Cập nhật máy mới, deal hot mỗi ngày</small></span>
+      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </a>
+
+    <button class="cta dark" type="button" data-sheet="callSheet">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>
+      <span class="txt"><b>Gọi ngay cho shop</b><small>010 8185 9168 · 010 2990 1866</small></span>
+      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </button>
+
+    <button class="cta" type="button" data-sheet="zaloSheet">
+      <span class="ic zalo">Zalo</span>
+      <span class="txt"><b>Nhắn Zalo Tâm Nguyễn</b><small>(+84) 0976 098 395 · bấm để nhắn Zalo</small></span>
+      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </button>
+
+    <a class="cta" href="https://map.naver.com/p/search/%EA%B2%BD%EB%B6%81%20%EC%98%81%EC%A3%BC%EC%8B%9C%20%EA%B5%AC%EC%84%B1%EB%A1%9C%20387" target="_blank" rel="noopener">
+      <span class="ic map"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+      <span class="txt"><b>Chỉ đường tới shop</b><small class="ko">경북 영주시 구성로 387 · Naver Map</small></span>
+      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </a>
+  </nav>
+
+  <section class="reveal">
+    <h2 class="h2">Dịch vụ tại shop</h2>
+    <div class="services">
+      <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><b>Điện thoại</b><small>Chính hãng</small></div>
+      <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg></div><b>iPad · MacBook</b><small>Cũ &amp; mới</small></div>
+      <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><b>Sửa iPhone</b><small>Thay pin</small></div>
+      <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 2h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><rect x="8.5" y="11" width="7" height="7" rx="1"/></svg></div><b>Sim 4G · 5G</b><small>Toàn quốc</small></div>
+      <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg></div><b>Lắp WiFi</b><small>Miễn phí</small></div>
+      <div class="svc"><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6.3 5.4 5.4 0 0 1 21.3 12C19 16.6 12 21 12 21z"/></svg></div><b>Hỗ trợ</b><small>Nhiệt tình</small></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="promo">
+      <h3>Lên sim chính chủ <span>FREE</span><br>nhận quà cực đã 🎁</h3>
+      <ul>
+        <li><span>Sửa chữa, <em>thay pin điện thoại</em> lấy nhanh</span></li>
+        <li><span>Điện thoại, iPad, MacBook <em>cũ – mới giá tốt</em></span></li>
+        <li><span>Sim giá rẻ – <em>lắp WiFi miễn phí</em> toàn Hàn</span></li>
+        <li><span>Hỗ trợ nhiệt tình – nhanh gọn – giá tốt</span></li>
+      </ul>
+      <button class="poster" type="button" data-zoom="assets/poster.webp" data-cap="Lên sim chính chủ FREE – nhận quà cực đã">
+        <img src="assets/poster.webp" alt="Poster quà tặng khi lên sim chính chủ" loading="lazy"><span>Xem quà tặng</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 class="h2">Thông tin cửa hàng</h2>
+    <div class="info">
+      <div class="row">
+        <span class="ri"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+        <div><small>Địa chỉ · TN telecom <span class="ko">10호점</span></small><b class="ko">경북 영주시 구성로 387</b>
+          <button class="copy" type="button" data-copy="경북 영주시 구성로 387" data-msg="Đã sao chép địa chỉ">Sao chép địa chỉ</button></div>
+      </div>
+      <div class="row">
+        <span class="ri"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>
+        <div><small>Hotline</small><a class="tel" href="tel:+821081859168">010 8185 9168</a><a class="tel" href="tel:+821029901866">010 2990 1866</a></div>
+      </div>
+      <div class="row">
+        <span class="ri" style="background:#E6F0FF;color:#0068FF;font-weight:900;font-size:10px">Zalo</span>
+        <div><small>Zalo</small><b>(+84) 0976 098 395</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 class="h2">Hình ảnh shop</h2>
+    <div class="gallery">
+      <button class="wide" type="button" data-zoom="assets/interior.webp" data-cap="Không gian Tâm Nguyễn Mobile"><img src="assets/interior.webp" alt="Bên trong cửa hàng" loading="lazy"></button>
+      <button type="button" data-zoom="assets/team.webp" data-cap="Tâm Nguyễn Mobile"><img src="assets/team.webp" alt="Chủ shop bên quầy iPhone" loading="lazy"></button>
+      <button type="button" data-zoom="assets/iphone.webp" data-cap="Máy mới về"><img src="assets/iphone.webp" alt="iPhone mới về" loading="lazy"></button>
+      <button type="button" data-zoom="assets/store-night.webp" data-cap="Mặt tiền buổi tối"><img src="assets/store-night.webp" alt="Mặt tiền cửa hàng buổi tối" loading="lazy"></button>
+      <button type="button" data-zoom="assets/store-night2.webp" data-cap="TN telecom 10호점"><img src="assets/store-night2.webp" alt="Biển hiệu cửa hàng" loading="lazy"></button>
+      <button class="wide" type="button" data-zoom="assets/storefront.webp" data-cap="경북 영주시 구성로 387"><img src="assets/storefront.webp" alt="Mặt tiền cửa hàng ban ngày" loading="lazy"></button>
+    </div>
+  </section>
+
+  <footer>
+    <img src="assets/logo.webp" alt="TN Mobile" loading="lazy">
+    © <span id="yr">2026</span> Tâm Nguyễn Mobile · <span class="ko">영주</span>, Korea
+  </footer>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="x" type="button" aria-label="Đóng">×</button>
+  <img alt="">
+  <div class="cap"></div>
+</div>
+
+<div class="sheet" id="callSheet" role="dialog" aria-modal="true" aria-label="Gọi cho shop">
+  <div class="sbox">
+    <button class="sx" type="button" aria-label="Đóng">×</button>
+    <b class="st">Gọi cho Tâm Nguyễn Mobile</b>
+    <span class="sn">Chọn số để gọi</span>
+    <a class="sbtn brand" href="tel:+821081859168">📞 010 8185 9168</a>
+    <a class="sbtn line" href="tel:+821029901866">📞 010 2990 1866</a>
+  </div>
+</div>
+
+<div class="sheet" id="zaloSheet" role="dialog" aria-modal="true" aria-label="Liên hệ Zalo">
+  <div class="sbox">
+    <button class="sx" type="button" aria-label="Đóng">×</button>
+    <b class="st">Zalo Tâm Nguyễn</b>
+    <span class="sn">(+84) 0976 098 395</span>
+    <a class="sbtn zalo" href="https://zalo.me/0976098395" target="_blank" rel="noopener">Mở Zalo nhắn tin</a>
+    <button class="sbtn line" type="button" data-copy="0976098395" data-msg="Đã sao chép số Zalo">Sao chép số Zalo</button>
+    <small>Không mở được? Sao chép số rồi tìm trong Zalo.</small>
+  </div>
+</div>
+
+<div class="toast" id="toast">Đã sao chép</div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Phóng to ảnh
+  var modal=document.getElementById('modal'), mImg=modal.querySelector('img'), mCap=modal.querySelector('.cap');
+  document.querySelectorAll('[data-zoom]').forEach(function(el){
+    el.addEventListener('click',function(e){
+      e.preventDefault();
+      mImg.src=el.dataset.zoom; mImg.alt=el.dataset.cap||''; mCap.textContent=el.dataset.cap||'';
+      modal.classList.add('open');
+    });
+  });
+  modal.addEventListener('click',function(e){ if(e.target!==mImg) modal.classList.remove('open'); });
+
+  // Bảng gọi điện / Zalo
+  var sheets=document.querySelectorAll('.sheet');
+  document.querySelectorAll('[data-sheet]').forEach(function(b){
+    b.addEventListener('click',function(){ document.getElementById(b.dataset.sheet).classList.add('open'); });
+  });
+  sheets.forEach(function(s){
+    s.addEventListener('click',function(e){ if(e.target===s||e.target.classList.contains('sx')) s.classList.remove('open'); });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ modal.classList.remove('open'); sheets.forEach(function(s){s.classList.remove('open')}); }
+  });
+
+  // Sao chép
+  var toast=document.getElementById('toast');
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var done=function(){toast.textContent=b.dataset.msg||'Đã sao chép';toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},1600)};
+      if(navigator.clipboard) navigator.clipboard.writeText(b.dataset.copy).then(done,done); else done();
+    });
+  });
+
+  // Hiệu ứng xuất hiện khi cuộn
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')}); }
+</script>
+</body>
+</html>
